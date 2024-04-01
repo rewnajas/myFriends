@@ -116,7 +116,7 @@
   <div id="friendsInputs"></div>
 </form>
   <button class="button button1" id="submitFriendsInfo" onclick="submitFriendsInfo()">Submit Friends Info</button>
-  <p id="Re1">Result:</p>
+  <p id="Re1"></p>
   <div id="friendsInfo"></div>
 
 <br>
@@ -175,6 +175,7 @@
         friendsInfoHTML += `Friend ${i}: Name: ${nickname}, Age: ${age}<br>`;
     }
     document.getElementById('friendsInfo').innerHTML = friendsInfoHTML;
+    document.getElementById('Re1').innerHTML = "Result:";
 }
 document.getElementById('calculateTotalAge').addEventListener('click', function() {
       const ages = document.querySelectorAll('#friendsInputs .age');
@@ -262,6 +263,7 @@ function calculateOldestAge() {
       document.getElementById('friendsInfo').innerHTML = '';
       document.getElementById('result').innerHTML = '';
       document.getElementById('randomNumber').value = '';
+      document.getElementById('please').innerHTML = '';
     });
   </script>
 </body>
